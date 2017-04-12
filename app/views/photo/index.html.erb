@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PhotoSite, from Imran Malik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CS-6320 Project 1">
+  <meta name="author" content="Imran Malik">
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron text-center col-mid-6">
+    <h1 class="text-primary">Photosite Photo Page </h1>
+  </div>
+</div>
+
+<h1 class="bg-primary">Photos of User  <strong> <%= @user.first_name  %> <%= @user.last_name %> </strong> </h1>
+<div class="row">
+  <div class="col-lg-6">
+      <div class="col-lg-6" style="
+      height: 100%;
+          overflow: scroll;
+      ">
+    <% @photos.each do |photo| %>
+        <%= image_tag(photo.file_name, alt: '..', class: 'img-rounded img-responsive') %>
+        <p class="text-success"> Photo Created at <%= photo.date_time %></p>
+        <%= link_to "Show comments", photo_comments_path(photo.id) %>
+    <%end%>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>
+
