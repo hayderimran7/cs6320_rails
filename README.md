@@ -1,25 +1,35 @@
-# README
+# CS6320 PROJECT R1 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## SUBMITTED BY:
+### MUHAMMAD IMRAN MALIK
+### NET ID : WM6952
+### CSU EAST BAY, HAYWARD HILLS
+### SPRING 2017
 
-Things you may want to cover:
+## Overview
+This is the project R1 for CS-6320 course taken by me for Spring 2017 under Professor Lynne Grewe.  
+I have created this repo to easy access when deploying this rails app on AWS. 
 
-* Ruby version
+## How to run
+### Preferred way (Docker) 
 
-* System dependencies
+I like to use docker for deploying applications.  
+For this make sure you have docker installed.  
+Once thats done, run the following script to start the rails app.
+```
+./run_docker.sh
+```
+This will start a container named `railsapp` and your app is accessible at 0.0.0.0:3000. 
 
-* Configuration
+## Features
+Following features are used in this app:
 
-* Database creation
+* Ruby on rails
 
-* Database initialization
+* Sqlite
 
-* How to run the test suite
+* Nodejs
 
-* Services (job queues, cache servers, search engines, etc.)
+* Bootstrap-sass
 
-* Deployment instructions
 
-* ...
-# cs6320_rails
