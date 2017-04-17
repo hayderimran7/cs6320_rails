@@ -6,4 +6,10 @@ class CommentController < ApplicationController
     @user = User.find_by(id: @photo.user_id)
     @has_comment = @comments.count > 0
   end
+  def show_user_name(user_id)
+    @user = User.find_by(id: user_id)
+    return @user.first_name
+  end
+  helper_method :show_user_name
 end
+

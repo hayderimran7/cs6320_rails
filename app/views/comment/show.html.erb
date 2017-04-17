@@ -19,9 +19,19 @@
 
   <% if @has_comment==true %>
       <ul class="list-group">
-      <% @comments.each do |comment| %>
-        <li class="list-group-item list-group-item-success"><strong>Comment: </strong><%= comment.comment_text %> <br> <strong>Created at: </strong><%= comment.date_time %></li>
-      <% end %>
+        <% @comments.each do |comment| %>
+            <li class="list-group-item list-group-item-success">
+              <p>
+                <strong>Comment: </strong><%= comment.comment_text %>
+              </p>
+              <p>
+                <strong>Created at: </strong><%= comment.date_time %>
+              </p>
+              <p>
+                <strong> Posted by:</strong>  <%= link_to show_user_name(comment.user_id) , user_photos_path(comment.user_id) %>
+              </p>
+            </li>
+        <% end %>
       </ul>
   <% else %>
       <p class="alert alert-danger"><strong>WARNING:</strong> No comments found</p>

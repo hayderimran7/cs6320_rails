@@ -28,14 +28,15 @@
   </thead>
   <tbody>
   <% @users.each do |user| %>
-  <tr>
-    <th><%= link_to user.id, user_photos_path(user.id) %> </th>
-    <td><%=user.first_name%></td>
-    <td><%=user.last_name%></td>
-  </tr>
+      <tr>
+        <th><%= link_to user.id, user_photos_path(user.id) %> </th>
+        <td><%=user.first_name%></td>
+        <td><%=user.last_name%></td>
+      </tr>
   <%end%>
   </tbody>
 </table>
 </body>
 </html>
+
 
