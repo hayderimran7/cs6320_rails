@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+    rails:
+        build: .
+        image: hayderimran7/myrailsapp
+        container_name: railsapp
+        ports:
+            - "3000:3000"
